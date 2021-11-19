@@ -1,31 +1,3 @@
-1 - Desenvolver os CRUD básicos na linguagem escolhida. (planejar quais serão realizados)
-2 - Criação de stored procedures (mínimo 3 SP) e funções (mínimo 3 funções) que deverão ser usadas no programa desenvolvido.
+1 - Criação de stored procedures (mínimo 3 SP) e funções (mínimo 3 funções) que deverão ser usadas no programa desenvolvido;
 
-
-
-
-- Elaborar a documentação do banco a ser utilizado (modelo ER, diagramas, dicionário de dados). O grupo deverá apresentar a documentação necessária para compreensão da estrutura do banco.
-
-- Elaboração de um plano de backup para o banco
-
-- Organização da distribuição do banco(s) e aplicações (nuvem, distribuído, cliente servidor, web e etc)
-
-- O grupo deverá popular as tabelas com massa de dados “grande” (acima de 1000 registros), de forma automática, em todas as tabelas.
-
-- Apresentar técnicas de otimização de consultas
-
-- O grupo deverá apresentar o funcionamento (em aula) dos CRUDs diretamente na linguagem, e não no SGBD. Deverá ser apresentado o sistema em funcionamento, código-fonte da linguagem escolhida e os scritps do banco de dados.
-
-- Além da apresentação em aula, APENAS UM integrante do grupo deverá postar no BB um zip contendo os seguintes itens:
-
-            - apresentação em PDF sobre o trabalho (no máximo 15 slides)
-
-            - fontes do programa e o executável (se for o caso)
-
-            - scripts DML, DDL, DTL e etc
-
-            - códigos das stored procedures e functions criadas
-
-- plano de backup do banco
-
-- descrição dos aspectos de segurança do banco implementados
+2 - Organizar o menu, selecionar tabelas e rows;

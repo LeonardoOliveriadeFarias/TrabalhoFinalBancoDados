@@ -1,0 +1,3 @@
+1 - Criação de stored procedures (mínimo 3 SP) e funções (mínimo 3 funções) que deverão ser usadas no programa desenvolvido;
+
+2 - Organizar o menu, selecionar tabelas e rows;

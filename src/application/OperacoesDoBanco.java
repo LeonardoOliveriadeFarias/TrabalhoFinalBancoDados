@@ -125,9 +125,6 @@ public class OperacoesDoBanco {
 		ResultSet rs = null;
 		
 		try {
-				int aux = 0;
-				String resposta;
-				Scanner sc = new Scanner(System.in);
 								
 				st = conn.createStatement();
 				
@@ -326,7 +323,6 @@ public class OperacoesDoBanco {
 		PreparedStatement  pst = null;
 		try {
 				int aux = 0;
-				String resposta;
 				Scanner sc = new Scanner(System.in);
 				
 				
@@ -406,6 +402,129 @@ public class OperacoesDoBanco {
 	}
 
 	
+	public void storedProcedures(int tabela, Connection conn) {
+		PreparedStatement  pst = null;
+		try {
+				int aux = 0;
+				Scanner sc = new Scanner(System.in);
+				
+				
+				switch (tabela) {
+				case 1:
+					System.out.println("Busca Dependentes");
+					pst = conn.prepareStatement(
+							  "CALL BuscaDependentes(?)");
+									
+					
+					System.out.println("Digite id do funcionário qeu deseja ver seus dependentes");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+					
+					break;
+					
+				case 2:
+					System.out.println("Busca Automóvel");
+					pst = conn.prepareStatement(
+							"CALL BuscaAutomovel(?)");
+					
+					
+					System.out.println("Digite id do funcionário que deseja ver os automóveis");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+								
+					break;
+					
+				case 3:
+					System.out.println("Busca filiais da cidade");
+					pst = conn.prepareStatement(
+							"CALL BuscaFilial(?)");
+					
+					
+					System.out.println("Digite id da cidade");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+							
+					break;
+			
+				
+				case 0:
+					System.out.println("Retornando ao menu");
+					break;
+					
+				default:
+					System.out.println("Opcao inexistente");
+					break;
+				}
+				pst.executeUpdate();
+				
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DB.closeStatement(pst);
+		}
+		
+	}
 
-
+	
+	public void functions(int tabela, Connection conn) {
+		PreparedStatement  pst = null;
+		try {
+				int aux = 0;
+				Scanner sc = new Scanner(System.in);
+				
+				
+				switch (tabela) {
+				case 1:
+					System.out.println("");
+					pst = conn.prepareStatement(
+							  "SELECT nomeFunc(?)");
+									
+					
+					System.out.println("");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+					
+					break;
+					
+				case 2:
+					System.out.println("");
+					pst = conn.prepareStatement(
+							"SELECT nomeFunc(?)");
+					
+					
+					System.out.println("");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+								
+					break;
+					
+				case 3:
+					System.out.println("");
+					pst = conn.prepareStatement(
+							"SELECT nomeFunc(?)");
+					
+					
+					System.out.println("Digite id da cidade");
+					aux = sc.nextInt();
+					pst.setInt(1, aux);
+							
+					break;
+			
+				
+				case 0:
+					System.out.println("Retornando ao menu");
+					break;
+					
+				default:
+					System.out.println("Opcao inexistente");
+					break;
+				}
+				pst.executeUpdate();
+				
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DB.closeStatement(pst);
+		}
+	}
 }

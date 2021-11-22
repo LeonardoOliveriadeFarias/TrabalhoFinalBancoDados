@@ -103,9 +103,9 @@ public class Program {
 				//Functions
 				
 				System.out.println("Qual function realizar?\n "
-						+ "1 - \n"
-						+ "2 - \n"
-						+ "3 - \n");
+						+ "1 - Trocar Cedilha por C\n"
+						+ "2 - Numero de cidades de um Estado\n"
+						+ "3 - Numero de filiais de uma cidade\n");
 				tabela = sc.nextInt();
 				banco.functions(tabela, conn);
 				

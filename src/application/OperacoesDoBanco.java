@@ -471,37 +471,37 @@ public class OperacoesDoBanco {
 		try {
 				int aux = 0;
 				Scanner sc = new Scanner(System.in);
-				
+				String resposta;
 				
 				switch (tabela) {
 				case 1:
-					System.out.println("");
+					System.out.println("Troca cedilha");
 					pst = conn.prepareStatement(
-							  "SELECT nomeFunc(?)");
+							  "SELECT trocacedilha(?)");
 									
 					
-					System.out.println("");
-					aux = sc.nextInt();
-					pst.setInt(1, aux);
+					System.out.println("Digite o nome da cidade com cedilha para remoção");
+					resposta = sc.nextLine();
+					pst.setString(1,resposta);
 					
 					break;
 					
 				case 2:
-					System.out.println("");
+					System.out.println("Cidades do Estado");
 					pst = conn.prepareStatement(
-							"SELECT nomeFunc(?)");
+							"SELECT nroCidades(?)");
 					
 					
-					System.out.println("");
+					System.out.println("Digite o Id do Estado");
 					aux = sc.nextInt();
 					pst.setInt(1, aux);
 								
 					break;
 					
 				case 3:
-					System.out.println("");
+					System.out.println("Filial");
 					pst = conn.prepareStatement(
-							"SELECT nomeFunc(?)");
+							"SELECT nroFiliais(?)");
 					
 					
 					System.out.println("Digite id da cidade");
@@ -527,4 +527,6 @@ public class OperacoesDoBanco {
 			DB.closeStatement(pst);
 		}
 	}
+
+
 }
